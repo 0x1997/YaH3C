@@ -77,6 +77,8 @@ def enter_interactive_usermanager():
     
     # user has been created or already have users
     users_info = um.get_all_users_info()
+    if users_info:
+        return users_info[0]
 
     print '0 - add a new user'
     for i, user_info in enumerate(users_info):
